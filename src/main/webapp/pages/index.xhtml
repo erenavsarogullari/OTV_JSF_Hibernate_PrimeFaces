@@ -1,0 +1,25 @@
+<html xmlns="http://www.w3.org/1999/xhtml"  
+     xmlns:h="http://java.sun.com/jsf/html"      
+      xmlns:f="http://java.sun.com/jsf/core"
+     xmlns:p="http://primefaces.prime.com.tr/ui">  
+   
+ <h:head><title>Welcome to JSF_PrimeFaces_Hibernate Project</title></h:head>  
+ <body>
+     <h:form>      
+	     <table> 
+		     <tr>
+		     	<td><h:outputLabel for="name" value="Name:" /></td>
+		     	<td><p:inputText id="name" value="#{userMBean.name}"/></td>
+		     </tr>
+		     <tr>
+		     	<td><h:outputLabel for="surname" value="Surname:" /></td>   
+		     	<td><p:inputText id="surname" value="#{userMBean.surname}"/> </td>    
+		     </tr>            
+	         <tr>
+		     	<td><p:commandButton id="submit" value="Save" action="#{userMBean.save}" ajax="false"/></td>
+		     	<td><p:commandButton id="reset" value="Reset" action="#{userMBean.reset}" ajax="false"/></td>
+		     </tr>   
+	     </table>
+     </h:form>      
+</body>    
+</html> 
